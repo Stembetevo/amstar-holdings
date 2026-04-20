@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --amstar-navy: #0a1628;
+  --amstar-amber: #f5a623;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  color: #1e293b;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.circuit-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    radial-gradient(circle at 20% 20%, rgba(245, 166, 35, 0.35), transparent 35%),
+    radial-gradient(circle at 80% 70%, rgba(245, 166, 35, 0.2), transparent 30%);
+  background-size: 46px 46px, 46px 46px, auto, auto;
+}
