@@ -3,17 +3,13 @@ import { Target, Users, Zap } from 'lucide-react'
 
 const team = [
   {
-    name: 'Amina Wanjiru',
+    name: 'Moses Kinyua',
     role: 'Managing Director',
     bio: 'Leads strategy and growth with a focus on scalable, customer-first energy delivery.',
   },
+  
   {
-    name: 'David Omondi',
-    role: 'Lead Electrical Engineer',
-    bio: 'Specializes in safe, efficient design and implementation for complex electrical systems.',
-  },
-  {
-    name: 'Grace Njeri',
+    name: 'Florence Mumbi',
     role: 'Head of Solar Projects',
     bio: 'Oversees solar deployments from feasibility to commissioning and long-term support.',
   },
@@ -23,15 +19,15 @@ function About() {
   return (
     <main className="bg-white pb-20">
       <section className="relative overflow-hidden bg-slate-50 py-20">
-        <div className="absolute -left-20 top-0 h-64 w-64 rounded-full bg-[#F5A623]/20 blur-3xl" />
-        <div className="absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-[#0A1628]/10 blur-3xl" />
+        <div className="absolute -left-20 top-0 h-64 w-64 rounded-full bg-[#FFFFFF]/20 blur-3xl" />
+        <div className="absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-[#5997F4]/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-extrabold tracking-tight text-[#0A1628] sm:text-5xl"
+            className="text-4xl font-extrabold tracking-tight text-[#5997F4] sm:text-5xl"
           >
             About Amstar Holdings
           </motion.h1>
@@ -69,10 +65,10 @@ function About() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="rounded-2xl border border-slate-200 p-6"
           >
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#0A1628] text-[#F5A623]">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#5997F4] text-[#FFFFFF]">
               <item.icon size={22} />
             </div>
-            <h2 className="mt-4 text-xl font-bold text-[#0A1628]">{item.title}</h2>
+            <h2 className="mt-4 text-xl font-bold text-[#5997F4]">{item.title}</h2>
             <p className="mt-3 text-sm text-slate-600">{item.text}</p>
           </motion.article>
         ))}
@@ -84,7 +80,7 @@ function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-extrabold tracking-tight text-[#0A1628]"
+          className="text-3xl font-extrabold tracking-tight text-[#5997F4]"
         >
           Meet The Team
         </motion.h2>
@@ -106,8 +102,8 @@ function About() {
                 className="h-56 w-full object-cover"
               />
               <div className="p-6">
-                <h3 className="text-lg font-bold text-[#0A1628]">{member.name}</h3>
-                <p className="mt-1 text-sm font-semibold text-[#F5A623]">{member.role}</p>
+                <h3 className="text-lg font-bold text-[#5997F4]">{member.name}</h3>
+                <p className="mt-1 text-sm font-semibold text-[#5997F4]">{member.role}</p>
                 <p className="mt-3 text-sm text-slate-600">{member.bio}</p>
               </div>
             </motion.article>

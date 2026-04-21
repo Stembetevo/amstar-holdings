@@ -9,6 +9,8 @@ const services = [
     description:
       'Complete installation services for panels, distribution boards, cabling, lighting systems, and backup power integration across commercial and residential projects.',
     cta: 'Book an Electrical Assessment',
+    image:
+      'https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=1200&q=80',
   },
   {
     icon: Sun,
@@ -16,6 +18,8 @@ const services = [
     description:
       'Site analysis, system sizing, procurement, installation, and commissioning of grid-tied and hybrid solar systems that match your energy demand.',
     cta: 'Plan a Solar Project',
+    image:
+      'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80',
   },
   {
     icon: ClipboardCheck,
@@ -23,6 +27,8 @@ const services = [
     description:
       'Detailed consumption profiling, equipment-level loss detection, and practical action plans to improve efficiency and lower monthly utility spend.',
     cta: 'Request an Energy Audit',
+    image:
+      'https://images.unsplash.com/photo-1581091870622-1e5f56d4b13b?auto=format&fit=crop&w=1200&q=80',
   },
   {
     icon: Lightbulb,
@@ -30,13 +36,15 @@ const services = [
     description:
       'Strategic support for organizations planning efficiency upgrades, sustainability programs, and resilient energy infrastructure roadmaps.',
     cta: 'Talk to a Consultant',
+    image:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
   },
 ]
 
 function Services() {
   return (
     <main className="bg-white pb-20">
-      <section className="relative overflow-hidden bg-[#0A1628] py-20 text-white">
+      <section className="relative overflow-hidden bg-[#5997F4] py-20 text-white">
         <div className="absolute inset-0 opacity-20">
           <div className="circuit-grid h-full w-full" />
         </div>
@@ -64,18 +72,25 @@ function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.55, delay: index * 0.09 }}
-            className="grid gap-6 rounded-2xl border border-slate-200 p-6 shadow-sm md:grid-cols-[auto_1fr_auto] md:items-center"
+            className="grid gap-6 rounded-2xl border border-slate-200 p-6 shadow-sm md:grid-cols-[260px_1fr_auto] md:items-center"
           >
-            <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#0A1628] text-[#F5A623]">
-              <service.icon size={24} />
+            <div className="overflow-hidden rounded-2xl bg-slate-100">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="h-48 w-full object-cover"
+              />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#0A1628]">{service.title}</h2>
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#5997F4] text-[#FFFFFF]">
+                <service.icon size={24} />
+              </div>
+              <h2 className="text-2xl font-bold text-[#5997F4]">{service.title}</h2>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[#F5A623] px-5 py-2.5 text-sm font-semibold text-[#0A1628] transition hover:bg-[#0A1628] hover:text-[#F5A623]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#5997F4] bg-[#FFFFFF] px-5 py-2.5 text-sm font-semibold text-[#5997F4] transition hover:bg-[#5997F4] hover:text-[#FFFFFF]"
             >
               {service.cta}
               <ArrowRight size={16} />

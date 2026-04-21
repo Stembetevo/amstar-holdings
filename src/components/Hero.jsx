@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#0A1628] text-white">
+    <section className="relative overflow-hidden bg-[#5997F4] text-white">
       <div className="absolute inset-0 opacity-20">
         <div className="circuit-grid h-full w-full" />
       </div>
@@ -16,7 +16,7 @@ function Hero() {
           transition={{ duration: 0.7 }}
           className="relative z-10"
         >
-          <p className="mb-4 inline-flex rounded-full border border-[#F5A623]/60 bg-[#F5A623]/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#F5A623]">
+          <p className="mb-4 inline-flex rounded-full border border-[#FFFFFF]/60 bg-[#FFFFFF]/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#FFFFFF]">
             Future-Ready Energy Solutions
           </p>
           <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
@@ -29,14 +29,14 @@ function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[#F5A623] px-6 py-3 text-sm font-bold text-[#0A1628] transition hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full bg-[#FFFFFF] px-6 py-3 text-sm font-bold text-[#5997F4] transition hover:bg-slate-100"
             >
               Get a Free Quote
               <ArrowRight size={18} />
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-[#F5A623] hover:text-[#F5A623]"
+              className="inline-flex items-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#5997F4]"
             >
               Explore Services
             </Link>

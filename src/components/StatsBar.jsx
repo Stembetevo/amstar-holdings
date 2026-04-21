@@ -8,7 +8,7 @@ const stats = [
 
 function StatsBar() {
   return (
-    <section className="bg-[#0A1628] py-7">
+    <section className="bg-[#5997F4] py-7">
       <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
         {stats.map((stat, index) => (
           <motion.div

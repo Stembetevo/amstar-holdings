@@ -28,7 +28,7 @@ function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-extrabold tracking-tight text-[#0A1628]"
+          className="text-3xl font-extrabold tracking-tight text-[#5997F4]"
         >
           What Clients Say
         </motion.h2>
@@ -43,13 +43,13 @@ function Testimonials() {
               transition={{ duration: 0.55, delay: index * 0.1 }}
               className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <div className="mb-4 flex text-[#F5A623]">
+              <div className="mb-4 flex text-[#5997F4]">
                 {[...Array(5)].map((_, starIndex) => (
                   <Star key={starIndex} size={16} fill="currentColor" />
                 ))}
               </div>
               <p className="text-sm leading-relaxed text-slate-600">“{item.quote}”</p>
-              <p className="mt-5 text-sm font-semibold text-[#0A1628]">{item.name}</p>
+              <p className="mt-5 text-sm font-semibold text-[#5997F4]">{item.name}</p>
             </motion.article>
           ))}
         </div>

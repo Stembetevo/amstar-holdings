@@ -17,12 +17,12 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           to="/"
-          className="inline-flex items-center gap-3 text-lg font-bold tracking-tight text-[#0A1628]"
+          className="inline-flex items-center gap-3 text-lg font-bold tracking-tight text-[#5997F4]"
         >
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A1628] text-sm font-extrabold text-[#F5A623]">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#5997F4] text-sm font-extrabold text-[#FFFFFF]">
             AH
           </span>
-          <span>Amstar Holdings</span>
+          <span>AMSTAR Holdings</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -32,7 +32,7 @@ function Navbar() {
               to={item.to}
               className={({ isActive }) =>
                 `text-sm font-semibold transition ${
-                  isActive ? 'text-[#0A1628]' : 'text-slate-600 hover:text-[#0A1628]'
+                  isActive ? 'text-[#5997F4]' : 'text-slate-600 hover:text-[#5997F4]'
                 }`
               }
             >
@@ -41,15 +41,15 @@ function Navbar() {
           ))}
           <Link
             to="/contact"
-            className="rounded-full bg-[#F5A623] px-5 py-2.5 text-sm font-semibold text-[#0A1628] transition hover:bg-[#0A1628] hover:text-[#F5A623]"
+            className="rounded-full bg-[#5997F4] px-5 py-2.5 text-sm font-semibold text-[#FFFFFF] transition hover:bg-[#4a86db]"
           >
-            Get a Free Quote
+            Get a Quote
           </Link>
         </nav>
 
         <button
           type="button"
-          className="inline-flex rounded-lg p-2 text-[#0A1628] md:hidden"
+          className="inline-flex rounded-lg p-2 text-[#5997F4] md:hidden"
           onClick={() => setIsOpen((current) => !current)}
           aria-label="Toggle navigation"
         >
@@ -68,8 +68,8 @@ function Navbar() {
                 className={({ isActive }) =>
                   `rounded-lg px-3 py-2 text-sm font-semibold ${
                     isActive
-                      ? 'bg-[#0A1628] text-white'
-                      : 'text-slate-700 hover:bg-slate-100 hover:text-[#0A1628]'
+                      ? 'bg-[#5997F4] text-white'
+                      : 'text-slate-700 hover:bg-slate-100 hover:text-[#5997F4]'
                   }`
                 }
               >
