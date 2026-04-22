@@ -41,7 +41,7 @@ const services = [
     description:
       'Our data-driven assessments identify inefficiencies, benchmark consumption, and reveal realistic cost-saving opportunities.',
     image:
-      'https://images.unsplash.com/photo-1581091870622-1e5f56d4b13b?auto=format&fit=crop&w=1200&q=80',
+      'https://energysavings.com/wp-content/uploads/2023/12/certified-energy-auditor-cea-conducting-audits.jpg',
   },
   {
     icon: Lightbulb,

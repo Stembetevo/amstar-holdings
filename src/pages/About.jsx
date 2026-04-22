@@ -10,6 +10,11 @@ const team = [
   
   {
     name: 'Florence Mumbi',
+    role: 'Project Manager',
+    bio: 'Oversees solar deployments from feasibility to commissioning and long-term support.',
+  },
+  {
+    name: 'Stephen Karuru',
     role: 'Head of Solar Projects',
     bio: 'Oversees solar deployments from feasibility to commissioning and long-term support.',
   },
