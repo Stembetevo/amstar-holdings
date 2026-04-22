@@ -17,7 +17,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Contact form email backend
 
-The contact form posts to the local API at `/api/contact`.
+The contact form posts to `VITE_API_URL` when set, and falls back to `/api/contact` in local development.
 
 Copy `.env.example` to `.env` and set your SMTP values before starting the backend:
 
@@ -31,4 +31,6 @@ The SMTP server lives in [backend/server.js](backend/server.js).
 npm run dev
 ```
 
-`npm run dev` now starts both the frontend and the SMTP backend together. The backend validates name, email, phone, service, and message server-side, applies rate limiting, and emails the submission to `amstarholding@gmail.com`.
+`npm run dev` now starts both the frontend and the SMTP backend together.
+
+For production, set `VITE_API_URL` in Vercel to your Render backend URL, and set `CORS_ORIGIN` in Render to include your Vercel domain. The backend validates name, email, phone, service, and message server-side, applies rate limiting, and emails the submission to `amstarholding@gmail.com`.

@@ -11,6 +11,8 @@ const initialForm = {
   message: '',
 }
 
+const apiBaseUrl = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || ''
+
 function Contact() {
   const [formData, setFormData] = useState(initialForm)
   const [successMessage, setSuccessMessage] = useState('')
@@ -29,7 +31,7 @@ function Contact() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(`${apiBaseUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +45,10 @@ function Contact() {
         }),
       })
 
-      const result = await response.json()
+      const responseType = response.headers.get('content-type') || ''
+      const result = responseType.includes('application/json')
+        ? await response.json()
+        : { error: await response.text() }
 
       if (!response.ok) {
         throw new Error(result?.error || 'Unable to send your request right now.')
