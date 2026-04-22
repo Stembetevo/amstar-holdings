@@ -13,16 +13,48 @@ const initialForm = {
 function Contact() {
   const [formData, setFormData] = useState(initialForm)
   const [successMessage, setSuccessMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (event) => {
     const { name, value } = event.target
     setFormData((current) => ({ ...current, [name]: value }))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    setSuccessMessage('Thank you. Your request has been received. We will contact you shortly.')
-    setFormData(initialForm)
+    setSuccessMessage('')
+    setErrorMessage('')
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          service: formData.service,
+          message: formData.message.trim(),
+        }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result?.error || 'Unable to send your request right now.')
+      }
+
+      setSuccessMessage(result?.message || 'Thank you. Your request has been sent.')
+      setFormData(initialForm)
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'Something went wrong.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -125,15 +157,22 @@ function Contact() {
 
           <button
             type="submit"
+            disabled={isSubmitting}
             className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#5997F4] bg-[#FFFFFF] px-6 py-3 text-sm font-bold text-[#5997F4] transition hover:bg-[#5997F4] hover:text-[#FFFFFF] cursor-pointer"
           >
-            Submit Inquiry
+            {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
             <Send size={16} />
           </button>
 
           {successMessage && (
             <p className="mt-4 rounded-lg bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">
               {successMessage}
+            </p>
+          )}
+
+          {errorMessage && (
+            <p className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+              {errorMessage}
             </p>
           )}
         </motion.form>
@@ -164,11 +203,22 @@ function Contact() {
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-            <div className="flex h-72 items-center justify-center bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center">
-              <div className="rounded-xl bg-[#5997F4]/85 px-5 py-4 text-center text-white backdrop-blur-sm">
-                <p className="text-xs uppercase tracking-[0.18em] text-[#FFFFFF]">Google Maps</p>
-                <p className="mt-1 text-sm font-semibold">Map Placeholder - Office Location</p>
-              </div>
+            <div className="relative h-72">
+              <iframe
+                title="Amstar Holdings location"
+                src="https://www.google.com/maps?q=-1.2934992,36.9836388&z=17&output=embed"
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <a
+                href="https://www.google.com/maps/place/Zion+Ct,+Nairobi,+Kenya/@-1.2934992,36.9810639,17z/data=!3m1!4b1!4m6!3m5!1s0x182f6ced08630847:0x71c41b5f885c40b3!8m2!3d-1.2934992!4d36.9836388!16s/g/11gjnb2qmy?entry=tts&g_ep=EgoyMDI2MDQxOS4wIPu8ASoASAFQAw==&skid=c4f83c85-9ac8-4a5d-b7c0-f3bc290feac0"
+                target="_blank"
+                rel="noreferrer"
+                className="absolute left-4 top-4 rounded-xl bg-[#5997F4]/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm transition hover:bg-[#4a86db]"
+              >
+                Open in Maps
+              </a>
             </div>
           </div>
         </motion.aside>
