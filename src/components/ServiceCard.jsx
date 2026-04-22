@@ -9,6 +9,7 @@ function ServiceCard({
   cta = 'Learn More',
   delay = 0,
   image,
+  to = '/contact',
 }) {
   return (
     <motion.article
@@ -31,7 +32,7 @@ function ServiceCard({
       <h3 className="mt-5 text-xl font-bold text-[#5997F4]">{title}</h3>
       <p className="mt-3 text-sm leading-relaxed text-slate-600">{description}</p>
       <Link
-        to="/contact"
+        to={to}
         className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#5997F4] transition group-hover:text-[#4a86db]"
       >
         {cta}

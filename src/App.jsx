@@ -6,6 +6,9 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Electrical from './pages/Electrical'
+import Solar from './pages/Solar'
+import Consult from './pages/Consult'
 
 function App() {
   const { pathname } = useLocation()
@@ -21,6 +24,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/electrical" element={<Electrical />} />
+        <Route path="/solar" element={<Solar />} />
+        <Route path="/consult" element={<Consult />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

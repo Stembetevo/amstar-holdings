@@ -18,6 +18,7 @@ import CTABanner from '../components/CTABanner'
 const services = [
   {
     icon: Bolt,
+    to: '/electrical',
     title: 'Electrical Installations',
     description:
       'From switchgear to full facility wiring, we deliver safe and compliant electrical systems built for long-term performance.',
@@ -26,6 +27,7 @@ const services = [
   },
   {
     icon: Sun,
+    to: '/solar',
     title: 'Solar Installations',
     description:
       'Reduce your grid dependence with expertly designed rooftop and ground-mounted solar solutions tailored to your usage profile.',
@@ -34,6 +36,7 @@ const services = [
   },
   {
     icon: ClipboardCheck,
+    to: '/consult',
     title: 'Energy Audits',
     description:
       'Our data-driven assessments identify inefficiencies, benchmark consumption, and reveal realistic cost-saving opportunities.',
@@ -42,6 +45,7 @@ const services = [
   },
   {
     icon: Lightbulb,
+    to: '/consult',
     title: 'Energy Consulting',
     description:
       'Get strategic guidance on efficiency upgrades, electrification planning, and long-term energy transition decisions.',

@@ -19,10 +19,7 @@ function Navbar() {
           to="/"
           className="inline-flex items-center gap-3 text-lg font-bold tracking-tight text-[#5997F4]"
         >
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#5997F4] text-sm font-extrabold text-[#FFFFFF]">
-            AH
-          </span>
-          <span>AMSTAR Holdings</span>
+          <img src="/logo.png" alt="" width={100} height={100}/>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

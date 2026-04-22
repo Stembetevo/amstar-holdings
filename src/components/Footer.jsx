@@ -57,7 +57,7 @@ function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5" size={16} />
-              info@amstarholdings.com
+              amstarholding@gmail.com
             </li>
           </ul>
         </div>

@@ -158,7 +158,7 @@ function Contact() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 text-[#5997F4]" size={18} />
-                info@amstarholdings.com
+                amstarholding@gmail.com
               </li>
             </ul>
           </div>

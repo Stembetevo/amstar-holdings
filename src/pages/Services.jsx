@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 const services = [
   {
     icon: Bolt,
+    to: '/electrical',
     title: 'Electrical Installations',
     description:
       'Complete installation services for panels, distribution boards, cabling, lighting systems, and backup power integration across commercial and residential projects.',
@@ -14,6 +15,7 @@ const services = [
   },
   {
     icon: Sun,
+    to: '/solar',
     title: 'Solar Installations',
     description:
       'Site analysis, system sizing, procurement, installation, and commissioning of grid-tied and hybrid solar systems that match your energy demand.',
@@ -23,6 +25,7 @@ const services = [
   },
   {
     icon: ClipboardCheck,
+    to: '/consult',
     title: 'Electricity & Energy Audits',
     description:
       'Detailed consumption profiling, equipment-level loss detection, and practical action plans to improve efficiency and lower monthly utility spend.',
@@ -32,6 +35,7 @@ const services = [
   },
   {
     icon: Lightbulb,
+    to: '/consult',
     title: 'General Energy Consulting',
     description:
       'Strategic support for organizations planning efficiency upgrades, sustainability programs, and resilient energy infrastructure roadmaps.',
@@ -89,7 +93,7 @@ function Services() {
               <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
             </div>
             <Link
-              to="/contact"
+              to={service.to}
               className="inline-flex items-center gap-2 rounded-full border border-[#5997F4] bg-[#FFFFFF] px-5 py-2.5 text-sm font-semibold text-[#5997F4] transition hover:bg-[#5997F4] hover:text-[#FFFFFF]"
             >
               {service.cta}
