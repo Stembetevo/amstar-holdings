@@ -25,10 +25,10 @@ Copy `.env.example` to `.env` and set your SMTP values before starting the backe
 npm run server
 ```
 
-Run the Vite frontend in a second terminal:
+The SMTP server lives in [backend/server.js](backend/server.js).
 
 ```bash
 npm run dev
 ```
 
-The backend validates name, email, phone, service, and message server-side, applies rate limiting, and emails the submission to `amstarholding@gmail.com`.
+`npm run dev` now starts both the frontend and the SMTP backend together. The backend validates name, email, phone, service, and message server-side, applies rate limiting, and emails the submission to `amstarholding@gmail.com`.

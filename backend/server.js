@@ -4,9 +4,10 @@ import helmet from 'helmet'
 import rateLimit from 'express-rate-limit'
 import nodemailer from 'nodemailer'
 import dotenv from 'dotenv'
+import { fileURLToPath } from 'url'
 import { z } from 'zod'
 
-dotenv.config()
+dotenv.config({ path: fileURLToPath(new URL('../.env', import.meta.url)) })
 
 const app = express()
 const port = Number(process.env.PORT || 3001)

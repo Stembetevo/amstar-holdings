@@ -34,7 +34,19 @@ export default defineConfig([
   {
     files: ['server.js'],
     languageOptions: {
-      globals: globals.node,
+      globals: {
+        ...globals.node,
+        process: 'readonly',
+      },
+    },
+  },
+  {
+    files: ['backend/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        process: 'readonly',
+      },
     },
   },
 ])
