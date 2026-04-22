@@ -63,7 +63,7 @@ function Electrical() {
             <img
               src="/Photos-3-001/electrical6.jpg"
               alt="Electrical installation work"
-              className="h-full min-h-[320px] w-full object-cover"
+              className="h-full min-h-80 w-full object-cover"
             />
           </motion.div>
         </div>
