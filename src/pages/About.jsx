@@ -7,7 +7,6 @@ const team = [
     role: 'Managing Director',
     bio: 'Leads strategy and growth with a focus on scalable, customer-first energy delivery.',
   },
-  
   {
     name: 'Florence Mumbi',
     role: 'Project Manager',
@@ -15,8 +14,8 @@ const team = [
   },
   {
     name: 'Stephen Karuru',
-    role: 'Head of Solar Projects',
-    bio: 'Oversees solar deployments from feasibility to commissioning and long-term support.',
+    role: 'IT Specialist',
+    bio: 'Oversees solar technology testing for high quality products. ',
   },
 ]
 

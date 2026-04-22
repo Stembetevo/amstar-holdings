@@ -31,8 +31,9 @@ const services = [
       'Detailed consumption profiling, equipment-level loss detection, and practical action plans to improve efficiency and lower monthly utility spend.',
     cta: 'Request an Energy Audit',
     image:
-      'https://images.unsplash.com/photo-1581091870622-1e5f56d4b13b?auto=format&fit=crop&w=1200&q=80',
+      'https://energysavings.com/wp-content/uploads/2023/12/certified-energy-auditor-cea-conducting-audits.jpg',
   },
+
   {
     icon: Lightbulb,
     to: '/consult',
