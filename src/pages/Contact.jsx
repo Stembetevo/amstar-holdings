@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, MapPin, Phone, Send } from 'lucide-react'
+import Seo from '../components/Seo'
 
 const initialForm = {
   name: '',
@@ -59,6 +60,11 @@ function Contact() {
 
   return (
     <main className="bg-white pb-20">
+      <Seo
+        title="Contact Amstar Holdings"
+        description="Contact Amstar Holdings to request electrical, solar, audit, or energy consulting services in Nairobi, Kenya."
+        path="/contact"
+      />
       <section className="bg-[#5997F4] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.h1

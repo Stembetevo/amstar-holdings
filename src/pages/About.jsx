@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Target, Users, Zap } from 'lucide-react'
+import Seo from '../components/Seo'
 
 const team = [
   {
@@ -22,6 +23,11 @@ const team = [
 function About() {
   return (
     <main className="bg-white pb-20">
+      <Seo
+        title="About Amstar Holdings"
+        description="Learn about Amstar Holdings, an energy solutions company in Nairobi focused on safe, efficient, and affordable power systems."
+        path="/about"
+      />
       <section className="relative overflow-hidden bg-slate-50 py-20">
         <div className="absolute -left-20 top-0 h-64 w-64 rounded-full bg-[#FFFFFF]/20 blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-[#5997F4]/10 blur-3xl" />

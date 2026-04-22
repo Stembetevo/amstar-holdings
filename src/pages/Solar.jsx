@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, SunMedium } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo'
 
 const projectImages = [
   '/Photos-3-001/solar.jpg',
@@ -18,6 +19,11 @@ const highlights = [
 function Solar() {
   return (
     <main className="bg-white pb-20">
+      <Seo
+        title="Solar Installations in Nairobi"
+        description="Explore Amstar Holdings' solar installation projects, including rooftop and hybrid systems designed for long-term savings in Nairobi."
+        path="/solar"
+      />
       <section className="bg-[#5997F4] py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
           <motion.div

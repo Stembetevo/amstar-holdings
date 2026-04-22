@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, ClipboardCheck } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo'
 
 const projectImages = [
   '/Photos-3-001/audit.jpg',
@@ -18,6 +19,11 @@ const highlights = [
 function Consult() {
   return (
     <main className="bg-white pb-20">
+      <Seo
+        title="Energy Audits and Consulting in Nairobi"
+        description="Amstar Holdings provides energy audits and consulting services that identify waste, improve efficiency, and guide better energy decisions."
+        path="/consult"
+      />
       <section className="bg-[#5997F4] py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
           <motion.div

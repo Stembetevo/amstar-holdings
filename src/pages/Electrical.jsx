@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, Zap } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo'
 
 const projectImages = [
   '/Photos-3-001/electrical.jpg',
@@ -20,6 +21,11 @@ const highlights = [
 function Electrical() {
   return (
     <main className="bg-white pb-20">
+      <Seo
+        title="Electrical Installations in Nairobi"
+        description="See Amstar Holdings' electrical installation work, including panels, cabling, lighting systems, and backup power integration in Nairobi."
+        path="/electrical"
+      />
       <section className="bg-[#5997F4] py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
           <motion.div

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Bolt, ClipboardCheck, Lightbulb, Sun } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo'
 
 const services = [
   {
@@ -49,6 +50,11 @@ const services = [
 function Services() {
   return (
     <main className="bg-white pb-20">
+      <Seo
+        title="Electrical, Solar, and Energy Consulting Services"
+        description="Explore Amstar Holdings' electrical installations, solar installations, energy audits, and consulting services for residential and commercial projects in Nairobi."
+        path="/services"
+      />
       <section className="relative overflow-hidden bg-[#5997F4] py-20 text-white">
         <div className="absolute inset-0 opacity-20">
           <div className="circuit-grid h-full w-full" />

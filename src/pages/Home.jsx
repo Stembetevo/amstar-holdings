@@ -14,6 +14,7 @@ import ServiceCard from '../components/ServiceCard'
 import StatsBar from '../components/StatsBar'
 import Testimonials from '../components/Testimonials'
 import CTABanner from '../components/CTABanner'
+import Seo from '../components/Seo'
 
 const services = [
   {
@@ -80,6 +81,11 @@ const trustPoints = [
 function Home() {
   return (
     <>
+      <Seo
+        title="Electrical and Solar Solutions in Nairobi"
+        description="Amstar Holdings delivers electrical installations, solar installations, energy audits, and energy consulting for homes and businesses in Nairobi, Kenya."
+        path="/"
+      />
       <Hero />
 
       <section className="bg-white py-20">
